@@ -4,6 +4,11 @@
 <section>
     <div>
         <h1>Lista Temas</h1>
+        <ul>
+        {% for tema in temas %}
+            <li>{{ tema.nombre }}</li>
+        {% endfor %}
+        </ul>
     </div>
 </section>
 {% endblock content %}

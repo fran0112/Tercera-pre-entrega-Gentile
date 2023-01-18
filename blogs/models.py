@@ -5,6 +5,9 @@ class Blog(models.Model):
     posteo= models.TextField()
     fecha_posteo= models.DateTimeField()
 
+def __str__(self):  
+    return f"{self.titulo}, {self.fecha_posteo}"
+
 
 class Bloguer(models.Model):
     nombre= models.CharField(max_length=128)
@@ -15,6 +18,13 @@ class Bloguer(models.Model):
     bio= models.TextField()
 
 
+def __str__(self): 
+    return f"{self.nombre_usuario}, {self.nombre}"
+
+
 class Tema(models.Model):
     nombre= models.CharField(max_length=20)
+
+def __str__(self): 
+    return f"{self.nombre}"
 
