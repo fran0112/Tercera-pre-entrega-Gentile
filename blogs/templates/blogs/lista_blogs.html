@@ -1,14 +1,18 @@
 {% extends "blogs/base.html" %}
 
+
+{% block subtitulo %}
+Lista Blogs
+{% endblock subtitulo %}
+   
+
 {% block content %}
-<section>
-    <div>
-        <h1>Lista de Blogs</h1>
-        <ul>
-        {% for blog in blogs %}
-            <li>{{ blog.titulo }},     {{ blog.posteo }}</li>
-        {% endfor %}
-        </ul>
-    </div>
-</section>
+
+<h1>Lista de Blogs</h1>
+<ul>
+{% for blog in blogs %}
+    <li>{{ blog.titulo }},     {{ blog.fecha_posteo }}</li>
+{% endfor %}
+</ul>
+
 {% endblock content %}

@@ -5,8 +5,8 @@ class Blog(models.Model):
     posteo= models.TextField()
     fecha_posteo= models.DateTimeField()
 
-def __str__(self):  
-    return f"{self.titulo}, {self.fecha_posteo}"
+    def __str__(self):  
+        return f"{self.titulo}, {self.fecha_posteo}"
 
 
 class Bloguer(models.Model):
@@ -18,13 +18,13 @@ class Bloguer(models.Model):
     bio= models.TextField()
 
 
-def __str__(self): 
-    return f"{self.nombre_usuario}, {self.nombre}"
+    def __str__(self): 
+        return f"{self.nombre_usuario}, {self.nombre}"
 
 
 class Tema(models.Model):
     nombre= models.CharField(max_length=20)
 
-def __str__(self): 
-    return f"{self.nombre}"
+    def __str__(self): 
+        return f"{self.nombre}"
 

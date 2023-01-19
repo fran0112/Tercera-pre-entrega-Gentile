@@ -1,11 +1,11 @@
 from django.urls import path
 
-from blogs.views import saludar, lista_blogs, lista_temas
+from blogs.views import lista_blogs, lista_temas, lista_bloguers
 
 
 urlpatterns = [
-    path('saludar/', saludar),
-    path('lista', lista_blogs),
-    path('lista-temas', lista_temas)
+    path('blogs', lista_blogs, name="listar_blogs"),
+    path('temas', lista_temas, name= "listar_temas"),
+    path('bloguers', lista_bloguers, name= "listar_bloguers"),
     
 ]

@@ -2,8 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from blogs.models import *
 
-def saludar(request):
-    return HttpResponse('Hola esta es mi primer pagina WEB!!!')
+def inicio(request):
+    return render(request=request,
+    template_name='blogs/inicio.html',
+    )
 
 def lista_blogs(request):
     contexto= {
@@ -15,4 +17,18 @@ def lista_blogs(request):
     )
 
 def lista_temas(request):
-    return render(request=request, template_name='blogs/lista_temas.html')
+    contexto= {
+        'temas': Tema.objects.all()
+    }
+    return render(request=request,
+     template_name='blogs/lista_temas.html',
+     context=contexto)
+
+
+def lista_bloguers(request):
+    contexto= {
+        'bloguers': Bloguer.objects.all()
+    }
+    return render(request=request,
+     template_name='blogs/lista_bloguers.html',
+     context=contexto)

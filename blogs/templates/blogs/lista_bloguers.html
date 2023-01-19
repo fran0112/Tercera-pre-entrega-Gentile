@@ -1,0 +1,12 @@
+{% extends "blogs/base.html" %}
+
+{% block content %}
+
+<h1>Lista Bloguers</h1>
+<ul>
+{% for bloguer in bloguers %}
+    <li>{{ bloguer.nombre }}  ,      {{ bloguer.nombre_usuario }}</li>
+{% endfor %}
+</ul>
+
+{% endblock content %}
